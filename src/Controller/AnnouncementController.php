@@ -62,7 +62,7 @@ class AnnouncementController extends FOSRestController
             $data = json_decode($request->getContent(), true);
 
             $announcement = new Announcement();
-            $form = $this->createForm(AnnouncementType::class, $announcement);
+            $form = $this->createForm(AnnouncementType::class, $announcement, ['category' => $data['category']]);
 
             $form->submit($data);
 

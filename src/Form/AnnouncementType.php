@@ -23,9 +23,9 @@ class AnnouncementType extends AbstractType
             ->add('category', ChoiceType::class, [
                 'placeholder' => 'Choose an option',
                 'choices' => [
-                    'Emploi' => 0,
-                    'Automobile' => 1,
-                    'Immobilier' => 2
+                    'job' => 0,
+                    'vehicle' => 1,
+                    'realEstate' => 2
                 ],
                 'mapped' => false
             ])
@@ -33,13 +33,13 @@ class AnnouncementType extends AbstractType
 
         $formModifier = function (FormInterface $form, $announcementType = null) {
 
-            // if ($announcementType === 0) {
+            if ($announcementType === 0) {
                 $form->add('job', JobType::class);
-            // } else if ($announcementType === 1) {
-            //     $form->add('vehicle');
-            // } else if ($announcementType === 2) {
-            //     $form->add('realEstate');
-            // }
+            } else if ($announcementType === 1) {
+                $form->add('vehicle', VehicleType::class);
+            } else if ($announcementType === 2) {
+                $form->add('realEstate', RealEstateType::class);
+            }
 
         };
 

@@ -2,6 +2,8 @@
 
 System that allows a user to create / edit / delete / retrieve an announcement with Symfony 4.2 and MySQL.
 
+NOT WORKING
+
 ## Before Launch
 
 Run composer install and load database.
@@ -15,7 +17,7 @@ php bin/console doctrine:fixtures:load
 * http://127.0.0.1:8000/api/announcement
 * http://127.0.0.1:8000/api/announcement/:id
 * http://127.0.0.1:8000/api/announcement/new
-* http://127.0.0.1:8000/api/announcement/edit/:id // Not working
+* http://127.0.0.1:8000/api/announcement/edit/:id
 * http://127.0.0.1:8000/api/announcement/remove/:id
 
 ## JSON Data
